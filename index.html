@@ -58,6 +58,15 @@
         .mobile-banner{
           display: block;
         }
+        .about-image{
+          height: 300px;
+        }
+        .desk-facilities{
+          display: none;
+        }
+        .mobile-facilities{
+          display: block;
+        }
       }
       @media (min-width: 767px) {
         .fa-bars{
@@ -68,6 +77,15 @@
           display: block;
         }
         .mobile-banner{
+          display: none;
+        }
+        .about-image{
+          height: 600px;
+        }
+        .desk-facilities{
+          display: block;
+        }
+        .mobile-facilities{
           display: none;
         }
       }
@@ -133,6 +151,88 @@
           }
         </style>
     
+
+    <style>
+      .google-review-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 20px;
+        max-width: 400px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        font-family: "Roboto", sans-serif;
+        background-color: #fff;
+        transition: transform 0.2s;
+      }
+
+      .google-review-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .review-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+      }
+
+      .review-avatar img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid #4285f4;
+        margin-right: 16px;
+      }
+
+      .google-logo img {
+        width: 40px;
+        height: 40px;
+        margin-left: 16px;
+      }
+
+      .review-info {
+        text-align: center;
+        flex: 1;
+      }
+
+      .reviewer-name {
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .review-rating {
+        margin-top: 4px;
+      }
+
+      .review-rating i {
+        color: #fbc02d;
+        margin: 0 2px;
+      }
+
+      .review-content {
+        /* border-top: 1px solid #e0e0e0; */
+        padding-top: 16px;
+        max-height: 120px; /* Adjust as needed */
+        overflow-y: auto;
+      }
+
+      .review-text {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555;
+        font-style: normal;
+      }
+ 
+      .appointment-mobile {
+        display: none;
+      }
+      .appointment-desk {
+        display: block;
+      }
+
+    </style>
+
   </head>
 
   <body>
@@ -631,24 +731,30 @@
               <img
                 src="images/spc2.jpeg"
                 alt=""
-                style="width: 404px; height: 504px"
+                class="about-image"
               />
-              <img
+              <!-- <img
+                src="images/spc2.jpeg"
+                alt=""
+                class="about-image"
+                style="width: 404px; height: 504px"
+              /> -->
+              <!-- <img
                 class="thumb"
                 src="images/R-2.jpg"
                 alt=""
                 style="width: 404px; height: 299px"
-              />
+              /> -->
               <!-- <div class="about-box">
                 <h4 class="title">6800 <sup>+</sup></h4>
                 <span>Satisfied Clients</span>
               </div> -->
-              <img
+              <!-- <img
                 class="about-logo"
                 src="images/istockphoto-1448657772-612x612-removebg-preview.png"
                 style="height: 280px; width: 300px"
                 alt=""
-              />
+              /> -->
             </div>
           </div>
           <div class="col-lg-6">
@@ -657,7 +763,7 @@
               <h3 class="title">
                 Where Compassion Meets
               </h3> <h3 class="title" style="color: #EE0012;">Innovation for Your Health</h3>
-              <p>
+              <p style="text-align: justify;">
                 We are in the field of Diabetes Care since 1994. We value
                 Patient Trust and Belief in Comprehensive , affordable up to
                 date , Empowering Diabetes Care . We are recognised Primarily
@@ -674,44 +780,8 @@
                 better if every patients gets above and beyond standardised care
                 based on his personal needs.
               </p>
-              <a href="about.html" class="main-btn">Read More</a>
-              <br /><br /><br /><br /><br />
-              <!-- <div class="row">
-                <div class="col-md-6">
-                  <div class="about-card">
-                    <div class="icon">
-                      <img src="assets/images/icon/icon-1.png" alt="" />
-                    </div>
-                    <div class="content">
-                      <h4 class="title">Website Development</h4>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="about-card">
-                    <div class="icon">
-                      <img src="assets/images/icon/icon-2.png" alt="" />
-                    </div>
-                    <div class="content">
-                      <h4 class="title">Website Development</h4>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-              <!-- <ul>
-                <li>
-                  <i class="fas fa-check-circle"></i> Exploring version oflorem
-                  veritatis proin
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Auctor aliquet aenean
-                  simply free text veritatis quis
-                </li>
-                <li>
-                  <i class="fas fa-check-circle"></i> Consequat ipsum nec lorem
-                  sagittis sem nibh.
-                </li>
-              </ul> -->
+              <a href="about.html" class="main-btn read-more">Read More</a>
+              <a href="https://click4appointment.com/clinic-details/sudhapreventioncentre-diabetescentre-3879" style="background-color: #EE0012;border: none;" class="main-btn book-app">Book An Appointment</a>
             </div>
           </div>
         </div>
@@ -722,85 +792,7 @@
 
     <!--====== INFETECH SERVICE PART ENDS ======-->
 
-    <section class="infetech-service-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div
-              class="single-infetech-serice-item animated wow fadeInUp"
-              data-wow-duration="1000ms"
-              data-wow-delay="0ms"
-            >
-              <div class="thumb">
-                <img
-                  src="images/509_main.jpg"
-                  style="width: 370px; height: 259px"
-                  alt=""
-                />
-              </div>
-              <div class="content">
-                <!-- <div class="icon">
-                  <img src="assets/images/icon/service-icon-1.png" alt="" />
-                </div> -->
-                <h3 class="title">
-                  <a>Trusted and Patient-Centered Diabetes Care </a>
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div
-              class="single-infetech-serice-item animated wow fadeInUp"
-              data-wow-duration="1000ms"
-              data-wow-delay="300ms"
-            >
-              <div class="thumb">
-                <img
-                  src="images/assistant-doing-insulin-level-measurement-600nw-2344496003.webp"
-                  style="width: 370px; height: 259px"
-                  alt=""
-                />
-              </div>
-              <div class="content">
-                <!-- <div class="icon">
-                  <img src="assets/images/icon/service-icon-2.png" alt="" />
-                </div> -->
-                <h3 class="title">
-                  <a
-                    >Advanced Diabetes Management in a Calm, Spacious Setting
-                  </a>
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div
-              class="single-infetech-serice-item animated wow fadeInUp"
-              data-wow-duration="1000ms"
-              data-wow-delay="600ms"
-            >
-              <div class="thumb">
-                <img
-                  src="images/benefits-of-personalized-treatment-plans.webp"
-                  style="width: 370px; height: 259px"
-                  alt=""
-                />
-              </div>
-              <div class="content">
-                <!-- <div class="icon">
-                  <img src="assets/images/icon/service-icon-3.png" alt="" />
-                </div> -->
-                <h3 class="title">
-                  <a
-                    >Commitment to Personalized and Up-to-Date Treatment Plans
-                  </a>
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+   
 
     <!--====== INFETECH SERVICE PART ENDS ======-->
 
@@ -813,6 +805,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        margin-top: 100px;
       "
     >
       <div
@@ -1108,7 +1101,10 @@
     <!--====== INFETECH FEATURE PART ENDS ======-->
 
     <!--====== INFETECH CTA PART ENDS ======-->
-
+    <section
+      class="infetech-fun-facts-area infetech-fun-facts-about-area"
+      style="background-color: #5f2dee"
+    >
     <div class="infetech-cta-area">
       <div class="container">
       <div class="row">
@@ -1161,6 +1157,7 @@
       </div>
       </div>
       </div>
+    </section>
     <!-- </div> -->
 
     <!--====== INFETECH CTA PART ENDS ======-->
@@ -1193,7 +1190,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid pl-160 pr-160">
+      <div class="container-fluid pl-160 pr-160 desk-facilities">
         <div class="row infetech-project-slide">
           <div class="col-lg-3">
             <div class="single-project-item">
@@ -1293,6 +1290,106 @@
           </div>
         </div>
       </div>
+      <div class="container-fluid pl-160 pr-160 mobile-facilities">
+        <div class="row infetech-project-slide">
+          <div class="col-lg-3">
+            <div class="single-project-item">
+              <img src="assets/facilities-images/12.jpg" alt="" />
+              <div class="single-project-overlay" sty>
+                <h4 class="title">MEDICAL CARE</h4>
+                <!-- <span>DESIGN / IDEAS</span> -->
+                <!-- <a href="gallery.html"
+                  ><i class="fal fa-long-arrow-right"></i
+                ></a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="single-project-item">
+              <img
+                src="assets/facilities-images/sudha-prevention-center6.jpg"
+                alt=""
+              />
+              <div class="single-project-overlay">
+                <h4 class="title">DAYCARE</h4>
+                <!-- <span>DESIGN / IDEAS</span> -->
+                <!-- <a href="gallery.html"
+                  ><i class="fal fa-long-arrow-right"></i
+                ></a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="single-project-item">
+              <img
+                src="assets/facilities-images/sudha-prevention-center11.jpg"
+                alt=""
+              />
+              <div class="single-project-overlay">
+                <h4 class="title">LIFE STYLE CONSULTATION</h4>
+                <!-- <span>DESIGN / IDEAS</span> -->
+                <!-- <a href="gallery.html"
+                  ><i class="fal fa-long-arrow-right"></i
+                ></a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="single-project-item">
+              <img
+                src="assets/facilities-images/sudha-prevention-center7.jpg"
+                alt=""
+              />
+              <div class="single-project-overlay">
+                <h4 class="title">LABORATORY DIAGNOSTIC SERVICES</h4>
+                <!-- <span>DESIGN / IDEAS</span> -->
+                <!-- <a href="gallery.html"
+                  ><i class="fal fa-long-arrow-right"></i
+                ></a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="single-project-item">
+              <img src="assets/facilities-images/14.jpg" alt="" />
+              <div class="single-project-overlay">
+                <h4 class="title">FOOT CARE</h4>
+                <!-- <span>DESIGN / IDEAS</span> -->
+                <!-- <a href="gallery.html"
+                  ><i class="fal fa-long-arrow-right"></i
+                ></a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="single-project-item">
+              <img src="assets/facilities-images/16.jpg" alt="" />
+              <div class="single-project-overlay">
+                <h4 class="title">AMBULATORY BLOOD PRESSURE MONITORING</h4>
+                <!-- <span>DESIGN / IDEAS</span> -->
+                <!-- <a href="gallery.html"
+                  ><i class="fal fa-long-arrow-right"></i
+                ></a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="single-project-item">
+              <img
+                src="assets/facilities-images/sudha-prevention-center9.jpg"
+                alt=""
+              />
+              <div class="single-project-overlay">
+                <h4 class="title">PRACTICAL MEAL SERVICES</h4>
+                <!-- <span>DESIGN / IDEAS</span> -->
+                <!-- <a href="gallery.html"
+                  ><i class="fal fa-long-arrow-right"></i
+                ></a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--====== INFETECH PROJECT PART ENDS ======-->
@@ -1357,116 +1454,138 @@
 
     <!--====== INFETECH TESTIMONIAL PART ENDS ======-->
 
-    <section class="infetech-testimonial-area">
+
+    <section class="infetech-project-slider-area-2" style="padding-bottom: 0px !important;">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
             <div class="section-title text-center mb-55">
               <span>Client Testimonials</span>
               <h3 class="title">What They’re <span class="title" style="font-weight: 800;color: #EE0012;">Talking?</span></h3>
             </div>
           </div>
         </div>
-        <div class="row infetech-testimonial-slide">
-          <div class="col-lg-6">
-            <div class="single-testimonial-box">
-              <div class="single-testimonial-user">
-                <div class="thumb">
-                  <img
-                    src="images/73-730477_first-name-profile-image-placeholder-png.webp"
-                    alt=""
-                  />
+        <div class="row project-slider-active">
+          <div class="col-lg-4">
+            <div class="single-project-slider-item">
+              <div class="google-review-card">
+                <div class="review-header">
+                  <div class="review-avatar">
+                    <img src="flat-icons/man.png" alt="Avatar" />
+                  </div>
+                  <div class="review-info">
+                    <h3 class="reviewer-name">Sabiha Subhan</h3>
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                  </div>
+                  <div class="google-logo">
+                    <img src="flat-icons/google.png" alt="Google Logo" />
+                  </div>
                 </div>
-                <div class="user-content">
-                  <h5 class="title">sabiha subhan</h5>
-                  <!-- <span>Senior Designer</span> -->
-                  <img src="assets/images/testimonial-shape.png" alt="" />
+                <div class="review-content">
+                  <p class="review-text">
+                    “I am patient of Dr.Arun R vadavi from past three.
+                    Yrs..excelent and dedicated service, i am totally satisfied by
+                    Drs. Approach and Guidance and treatment very indivudual.”
+                  </p>
                 </div>
-              </div>
-              <div class="single-testimonial-item">
-                <ul>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                </ul>
-                <p>
-                  “I am patient of Dr.Arun R vadavi from past three.
-                  Yrs..excelent and dedicated service, i am totally satisfied by
-                  Drs. Approach and Guidance and treatment very indivudual.”
-                </p>
-              </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="single-testimonial-box">
-              <div class="single-testimonial-user">
-                <div class="thumb">
-                  <img
-                    src="images/73-730477_first-name-profile-image-placeholder-png.webp"
-                    alt=""
-                  />
+          </div>
+          <div class="col-lg-4">
+            <div class="single-project-slider-item">
+              <div class="google-review-card">
+                <div class="review-header">
+                  <div class="review-avatar">
+                    <img src="flat-icons/man.png" alt="Avatar" />
+                  </div>
+                  <div class="review-info">
+                    <h3 class="reviewer-name">Sriram Jayaraman</h3>
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                  </div>
+                  <div class="google-logo">
+                    <img src="flat-icons/google.png" alt="Google Logo" />
+                  </div>
                 </div>
-                <div class="user-content">
-                  <h5 class="title">Sriram Jayaraman</h5>
-                  <!-- <span>Senior Developer</span> -->
-                  <img src="assets/images/testimonial-shape.png" alt="" />
-                </div>
-              </div>
-              <div class="single-testimonial-item">
-                <ul>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                </ul>
-                <p>
-                  “A very good diabetic specialist. Focuses on holistic health
+                <div class="review-content">
+                  <p class="review-text">
+                    “A very good diabetic specialist. Focuses on holistic health
                   of patients. Importance in given to diet. Only necessary
                   medicines are prescribed. I am consulting with Dr. Arun Vadavi
                   for over 3 years and an very happy and will refer him to my
                   friends and relatives.”
-                </p>
-              </div>
+                  </p>
+                </div>
+            </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="single-testimonial-box">
-              <div class="single-testimonial-user">
-                <div class="thumb">
-                  <img
-                    src="images/73-730477_first-name-profile-image-placeholder-png.webp"
-                    alt=""
-                  />
+          <div class="col-lg-4">
+            <div class="single-project-slider-item">
+              <div class="google-review-card">
+                <div class="review-header">
+                  <div class="review-avatar">
+                    <img src="flat-icons/man.png" alt="Avatar" />
+                  </div>
+                  <div class="review-info">
+                    <h3 class="reviewer-name">Parvathi Nritya Vihangamas</h3>
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                  </div>
+                  <div class="google-logo">
+                    <img src="flat-icons/google.png" alt="Google Logo" />
+                  </div>
                 </div>
-                <div class="user-content">
-                  <h5 class="title">Parvathi Nritya Vihangamas</h5>
-                  <!-- <span>Senior Designer</span> -->
-                  <img src="assets/images/testimonial-shape.png" alt="" />
+                <div class="review-content">
+                  <p class="review-text">
+                    “Hello Namaste to one and all.I am Nirmala Jagadish.I happened
+                    to visit Sudha prevention centre when I was in border line
+                    diabetes..Dr Arun Vadavi,a GREAT DOCTER,gave me treatment for
+                    one year, now I am completely normal,with no medications.”
+                  </p>
                 </div>
-              </div>
-              <div class="single-testimonial-item">
-                <ul>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                  <li><i class="fas fa-star"></i></li>
-                </ul>
-                <p>
-                  “Hello Namaste to one and all.I am Nirmala Jagadish.I happened
-                  to visit Sudha prevention centre when I was in border line
-                  diabetes..Dr Arun Vadavi,a GREAT DOCTER,gave me treatment for
-                  one year, now I am completely normal,with no medications.”
-                </p>
-              </div>
+            </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="single-project-slider-item">
+              <div class="google-review-card">
+                <div class="review-header">
+                  <div class="review-avatar">
+                    <img src="flat-icons/man.png" alt="Avatar" />
+                  </div>
+                  <div class="review-info">
+                    <h3 class="reviewer-name">Shyla Sastry</h3>
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                  </div>
+                  <div class="google-logo">
+                    <img src="flat-icons/google.png" alt="Google Logo" />
+                  </div>
+                </div>
+                <div class="review-content">
+                  <p class="review-text">
+                    Dr Vinay is an excellant physician and humble at heart. His
+                    compassionate care to kids is a blessing to any family. His
+                    knowledge and hold on the subject is extremely strong
+                    entrusting the confidence in parents. His special expertise in
+                    the field of childhood blood and cancer problems is
+                    commendable and unmatchable. I recommend him for any medical
+                    consultation related to children illnesses; and specially for
+                    all childhood blood and cancer ailments.
+                  </p>
+                </div>
+            </div>
             </div>
           </div>
         </div>
+        <div class="cta-btn text-center" style="margin-top: 60px;">
+          <a
+            class="main-btn"
+            href="https://www.google.com/search?q=sudhapreventioncentre&rlz=1C1CHBF_enIN979IN979&oq=sudhapreventioncentre&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIPCAEQLhgNGK8BGMcBGIAEMggIAhAAGA0YHjIKCAMQABiABBiiBDIGCAQQRRg8MgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEINDkyOWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#lrd=0x3bae3e38f129c877:0xd9571594123b64e8,1,,,,"
+            >More Reviews</a
+          >
+        </div>
       </div>
     </section>
+
+    
 
     <!--====== INFETECH TESTIMONIAL PART ENDS ======-->
 
@@ -1481,8 +1600,7 @@
               <h4 class="title">
                 Trusted Hands, Compassionate Hearts – Our Team of
               </h4>
-              <h4 class="title" style="color: #EE0012;"> Dedicated
-                Doctors.</h4>
+              <h4 class="title" style="color: #ee0012">Dedicated Doctors.</h4>
             </div>
           </div>
           <div class="col-lg-6">
@@ -1507,26 +1625,9 @@
                 <div class="thumb">
                   <img src="assets/doctors-images/sp1.jpeg" alt="" />
                 </div>
-                <div class="content">
+                <div class="content" style="text-align: center;">
                   <h4 class="title">Ms. Divyashree P</h4>
                   <span>Digital Head </span>
-                  <!-- <div class="share-icon">
-                    <i class="fas fa-share-alt"></i>
-                    <ul>
-                      <li>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                      </li>
-                    </ul>
-                  </div> -->
                 </div>
               </div>
             </div>
@@ -1540,26 +1641,9 @@
                 <div class="thumb">
                   <img src="assets/doctors-images/sp2.jpeg" alt="" />
                 </div>
-                <div class="content">
+                <div class="content" style="text-align: center;">
                   <h4 class="title">Varshitha</h4>
                   <span>Staff Nurse </span>
-                  <!-- <div class="share-icon">
-                    <i class="fas fa-share-alt"></i>
-                    <ul>
-                      <li>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                      </li>
-                    </ul>
-                  </div> -->
                 </div>
               </div>
             </div>
@@ -1573,26 +1657,9 @@
                 <div class="thumb">
                   <img src="assets/doctors-images/sp3.jpeg" alt="" />
                 </div>
-                <div class="content">
+                <div class="content" style="text-align: center;">
                   <h4 class="title">Pushpa Vishwanath</h4>
                   <span>Patient Educator </span>
-                  <!-- <div class="share-icon">
-                    <i class="fas fa-share-alt"></i>
-                    <ul>
-                      <li>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                      </li>
-                    </ul>
-                  </div> -->
                 </div>
               </div>
             </div>
@@ -1606,26 +1673,9 @@
                 <div class="thumb">
                   <img src="assets/doctors-images/sp4.jpeg" alt="" />
                 </div>
-                <div class="content">
+                <div class="content" style="text-align: center;">
                   <h4 class="title">Anusha H</h4>
                   <span>Patient Educator </span>
-                  <!-- <div class="share-icon">
-                    <i class="fas fa-share-alt"></i>
-                    <ul>
-                      <li>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                      </li>
-                    </ul>
-                  </div> -->
                 </div>
               </div>
             </div>
@@ -1639,26 +1689,9 @@
                 <div class="thumb">
                   <img src="assets/doctors-images/sp5.jpeg" alt="" />
                 </div>
-                <div class="content">
+                <div class="content" style="text-align: center;">
                   <h4 class="title">Mamatha Chandrashekar Holla</h4>
                   <span>Accountant</span>
-                  <!-- <div class="share-icon">
-                    <i class="fas fa-share-alt"></i>
-                    <ul>
-                      <li>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                      </li>
-                    </ul>
-                  </div> -->
                 </div>
               </div>
             </div>
@@ -1673,7 +1706,7 @@
 
     <!-- <section class="infetech-video-area">
       <div class="container">
-        <div class="row align-items-center">
+        <div class="align-items-center">
           <div class="col-lg-7">
             <div
               class="video-content animated wow fadeInLeft"
@@ -1732,7 +1765,7 @@
 
     <!-- <section class="infetech-blog-area pt-115 pb-120">
       <div class="container">
-        <div class="row align-items-center mb-50">
+        <div class="align-items-center mb-50">
           <div class="col-lg-12">
             <div class="section-title text-center">
               <span>What’s Happening</span>
@@ -1852,7 +1885,7 @@
         </div>
       </div>
       <div class="container-fluid pl-160 pr-160">
-        <div class="row infetech-project-slide">
+        <div class="infetech-project-slide">
           <div class="col-7">
             <div
               class="single-project-item"
@@ -2046,7 +2079,7 @@
         <div class="row">
           <div class="col-lg-3 col-md-6">
             <div class="footer-about">
-              <a href="#"><img src="assets/logo/logo.jpeg" style="max-width: 250px;border-radius: 10px;" alt="" /></a>
+              <a href="#"><img src="assets/logo/logo.jpeg" style="border-radius: 10px;" alt="" /></a>
               <p>
                 Since 1994, we’ve delivered trusted, comprehensive diabetes
                 care, led by Dr. Arun R Vadavi’s expert team.

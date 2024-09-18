@@ -178,7 +178,9 @@ p {
 @media (max-width: 767px) {
   .section-title {
     padding-left: 0;
-    padding-top: 20px; } }
+    padding-top: 20px;
+    text-align: center;
+  } }
 .section-title span {
   color: #5f2dee;
   font-size: 16px;
@@ -2025,7 +2027,9 @@ p {
   @media (max-width: 767px) {
     .infetech-about-content {
       padding-left: 0;
-      margin-top: 20px; } }
+      margin-top: 20px; 
+      text-align: center;
+    } }
   .infetech-about-content span {
     font-size: 16px;
     color: #5f2dee;
